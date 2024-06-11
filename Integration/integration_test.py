@@ -1,33 +1,15 @@
-# import addition
-# import multiplication
+#Project Name: integration_test
+#Developer: Reshma
+#Description: This task will create integration test cases to test all possible negative and positive scenarios
+
+import pythagorean_theorem
 import calculator
-def test_integration():
-    # Test multiplying the result of adding two numbers with another number
-    assert calculator.multiply(calculator.add(2, 3), 4) == 20
 
+# Pass the right and left side angle values of triangle for the positive test case
+def test_sides():
+    assert pythagorean_theorem.trianglesides(6,8) == 100
+    print("Its runnig")
 
-
-## Unit testing
-
-# def test_addition():
-#     assert calculator.add(2, 3) == 5
-#
-# def test_subtraction():
-#     assert calculator.subtract(5, 3) == 2
-#
-# def test_multiplication():
-#     assert calculator.multiply(2, 3) == 6
-#
-# def test_division():
-#     assert calculator.divide(6, 3) == 2
-#
-# def test_divide_by_zero():
-#     try:
-#         calculator.divide(6, 0)
-#     except ValueError as e:
-#         assert str(e) == "Cannot divide by zero"
-#     else:
-#         assert False, "Expected ValueError"
-#
-#
-#
+# Pass the triangle sides calculated value for the negative test case
+def test_hypotenuse():
+    assert pythagorean_theorem.hypotenuse(100) == 100
